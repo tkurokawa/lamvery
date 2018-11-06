@@ -22,7 +22,7 @@ RUNTIME_AND_EXTENSION = {
 
 
 def represent_odict(dumper, instance):
-    return dumper.represent_mapping(u'tag:yaml.org,2002:map', instance.items())
+    return dumper.represent_mapping('tag:yaml.org,2002:map', list(instance.items()))
 
 yaml.add_representer(OrderedDict, represent_odict)
 yaml.add_constructor(

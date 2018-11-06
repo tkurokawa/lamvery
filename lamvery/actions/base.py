@@ -12,9 +12,7 @@ from lamvery.clients import (
 )
 
 
-class BaseAction:
-
-    __metaclass__ = ABCMeta
+class BaseAction(metaclass=ABCMeta):
 
     _logger = None
 

@@ -5,9 +5,7 @@ import boto3
 from abc import ABCMeta
 
 
-class BaseClient:
-
-    __metaclass__ = ABCMeta
+class BaseClient(metaclass=ABCMeta):
 
     def __init__(self, region=None, profile=None, dry_run=False):
         self._session = boto3.session.Session(
